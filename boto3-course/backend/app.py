@@ -12,8 +12,10 @@ AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
 def create_s3_client():
     return boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY, aws_secret_access_key=AWS_SECRET_KEY)
 
-from Flask import Flask, request, jsonify
-from Flask_cors import CORS
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+
+
 
 # Initialize the Flask application
 app = Flask(__name__)
